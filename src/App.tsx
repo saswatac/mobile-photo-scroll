@@ -1,14 +1,14 @@
 const photos = [
   {
-    src: "/photos/photo1.png",
+    src: "photos/photo1.png",
     caption: "",
   },
   {
-    src: "/photos/photo2.jpg",
+    src: "photos/photo2.jpg",
     caption: "Quiet Forest Path",
   },
   {
-    src: "/photos/photo3.png",
+    src: "photos/photo3.png",
     caption: "",
   },
 ];
