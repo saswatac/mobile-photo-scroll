@@ -1,6 +1,6 @@
 const photos = [
   {
-    src: "/photos/photo1.jpg",
+    src: "/photos/photo1.png",
     caption: "",
   },
   {
@@ -8,8 +8,8 @@ const photos = [
     caption: "Quiet Forest Path",
   },
   {
-    src: "/photos/photo3.jpg",
-    caption: "City Skyline at Dusk",
+    src: "/photos/photo3.png",
+    caption: "",
   },
 ];
 
