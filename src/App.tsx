@@ -30,6 +30,7 @@ export default function App() {
               src={photo.src}
               alt={photo.caption}
               className="flex-grow w-full object-contain"
+              loading="lazy" // Enable native lazy loading
             />
 
             {/* Caption is in normal flow, always visible at bottom */}
