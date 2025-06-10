@@ -43,7 +43,7 @@ export default function App() {
         ))}
       </div>
       {/* Footer */}
-      <footer className="w-full bg-gray-900 text-white py-4 px-6 flex flex-row items-center justify-between">
+      <footer className="w-full bg-gray-900 text-black py-4 px-6 flex flex-row items-center justify-evenly">
         <span className="flex items-center gap-2">
           <FontAwesomeIcon icon={faPhone} />
           <a href="tel:+918240596697" className="underline">8240596697</a>
