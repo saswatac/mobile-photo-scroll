@@ -25,7 +25,7 @@ export default function App() {
           <img
             src={photo.src}
             alt={photo.caption}
-            className="flex-grow w-full object-cover"
+            className="flex-grow w-full object-contain"
           />
 
           {/* Caption is in normal flow, always visible at bottom */}
