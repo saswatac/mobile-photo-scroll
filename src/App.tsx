@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faLocationPin, faPhone, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 const photos = [
   {
@@ -17,8 +18,63 @@ const photos = [
 ];
 
 export default function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div className="h-screen w-screen flex flex-col" style={{ backgroundColor: 'black' }}>
+    <div className="h-screen w-screen flex flex-col relative" style={{ backgroundColor: 'black' }}>
+      {/* Menu Toggle Button and Items Container */}
+      <div className="fixed top-4 left-4 z-50 flex items-center">
+        {/* Menu Toggle Button */}
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          // className="bg-white/80 hover:bg-white/90 p-3  transition-all duration-200 relative z-10"
+          aria-label="Toggle menu"
+        >
+          <FontAwesomeIcon 
+            icon={isMenuOpen ? faTimes : faBars} 
+            // className="text-white w-5 h-5" 
+          />
+        </button>
+
+        {/* Horizontal Menu Items */}
+        <div
+          className={`flex items-center gap-3 ml-3 transition-all duration-300 ease-in-out ${
+            isMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0 pointer-events-none'
+          }`}
+        >
+          <div className="flex items-center gap-2 p-2 bg-gray-900/90 rounded-lg shadow-lg">
+            <FontAwesomeIcon icon={faPhone} className="text-green-400" />
+            <a
+              href="tel:+918240596697"
+              className="text-white hover:text-green-400 transition-colors text-sm"
+            >
+              8240596697
+            </a>
+          </div>
+          <div className="flex items-center gap-2 p-2 bg-gray-900/90 rounded-lg shadow-lg">
+            <FontAwesomeIcon icon={faLocationPin} className="text-red-400" />
+            <a
+              href="https://maps.app.goo.gl/PQYx8eLcVFYWyeBz6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-red-400 transition-colors text-sm"
+              aria-label="View Location"
+            >
+              SonarTari
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Overlay */}
+      {isMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-30"
+          onClick={() => setIsMenuOpen(false)}
+        />
+      )}
+
+      {/* Main Content */}
       <div className="flex-1 overflow-y-scroll snap-y snap-mandatory">
         {photos.map((photo, idx) => (
           <div
@@ -42,25 +98,6 @@ export default function App() {
           </div>
         ))}
       </div>
-      {/* Footer */}
-      <footer className="w-full bg-gray-900 text-black py-4 px-6 flex flex-row items-center justify-evenly">
-        <span className="flex items-center gap-2">
-          <FontAwesomeIcon icon={faPhone} />
-          <a href="tel:+918240596697" className="underline">8240596697</a>
-        </span>
-        <span className="flex items-center gap-2">
-          <FontAwesomeIcon icon={faLocationPin} className="mr-2" />
-          <a
-            href="https://maps.app.goo.gl/PQYx8eLcVFYWyeBz6"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-            aria-label="View Location"
-          >
-            SonarTari
-          </a>
-        </span>
-      </footer>
     </div>
   );
 }
