@@ -23,16 +23,17 @@ export default function App() {
   return (
     <div className="h-screen w-screen flex flex-col relative" style={{ backgroundColor: 'black' }}>
       {/* Menu Toggle Button and Items Container */}
-      <div className="fixed top-4 left-4 z-50 flex items-center">
+      <div className="fixed top-4 left-0 w-full z-50 flex items-center px-4">
         {/* Menu Toggle Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          // className="bg-white/80 hover:bg-white/90 p-3  transition-all duration-200 relative z-10"
+          className="bg-transparent hover:bg-white/10 p-3 transition-all duration-200 relative z-10 focus:outline-none"
           aria-label="Toggle menu"
         >
           <FontAwesomeIcon 
-            icon={isMenuOpen ? faTimes : faBars} 
-            // className="text-white w-5 h-5" 
+            icon={isMenuOpen ? faTimes : faBars}
+            className="text-white"
+            style={{ color: 'white' }}
           />
         </button>
 
@@ -43,7 +44,7 @@ export default function App() {
           }`}
         >
           <div className="flex items-center gap-2 p-2 bg-gray-900/90 rounded-lg shadow-lg">
-            <FontAwesomeIcon icon={faPhone} className="text-green-400" />
+            <FontAwesomeIcon icon={faPhone} style={{ color: 'white' }} className="text-green-400" />
             <a
               href="tel:+918240596697"
               className="text-white hover:text-green-400 transition-colors text-sm"
@@ -52,7 +53,7 @@ export default function App() {
             </a>
           </div>
           <div className="flex items-center gap-2 p-2 bg-gray-900/90 rounded-lg shadow-lg">
-            <FontAwesomeIcon icon={faLocationPin} className="text-red-400" />
+            <FontAwesomeIcon icon={faLocationPin} style={{ color: 'white' }} className="text-red-400" />
             <a
               href="https://maps.app.goo.gl/PQYx8eLcVFYWyeBz6"
               target="_blank"
