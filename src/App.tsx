@@ -7,8 +7,36 @@ const photos = [
     src: "photos/photo1.png",
     caption: "",
   },
+    {
+    src: "photos/3weeks.jpg",
+    caption: "",
+  },
+    {
+    src: "photos/1month.jpg",
+    caption: "",
+  },
+    {
+    src: "photos/2month.jpg",
+    caption: "",
+  },
+    {
+    src: "photos/3month.jpg",
+    caption: "",
+  },
+    {
+    src: "photos/traditional.jpg",
+    caption: "",
+  },
+    {
+    src: "photos/4month.jpg",
+    caption: "",
+  },
   {
-    src: "photos/photo2.jpg",
+    src: "photos/5month.jpg",
+    caption: "",
+  },
+  {
+    src: "photos/garden.jpg",
     caption: "",
   },
   {
@@ -23,7 +51,7 @@ export default function App() {
   return (
     <div className="h-screen w-screen flex flex-col relative" style={{ backgroundColor: 'black' }}>
       {/* Menu Toggle Button and Items Container */}
-      <div className="fixed top-4 left-0 w-full z-50 flex items-center px-4">
+      <div className="top-4 left-0 w-full z-50 flex items-center px-4">
         {/* Menu Toggle Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -48,6 +76,7 @@ export default function App() {
             <a
               href="tel:+918240596697"
               className="text-white hover:text-green-400 transition-colors text-sm"
+              style={{ color: 'white', textDecoration: 'underline' }}
             >
               8240596697
             </a>
@@ -60,6 +89,7 @@ export default function App() {
               rel="noopener noreferrer"
               className="text-white hover:text-red-400 transition-colors text-sm"
               aria-label="View Location"
+              style={{ color: 'white', textDecoration: 'underline' }}
             >
               SonarTari
             </a>
