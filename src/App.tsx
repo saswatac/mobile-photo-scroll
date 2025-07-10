@@ -8,7 +8,7 @@ const photos = [
   },
   {
     src: "photos/photo2.jpg",
-    caption: "Quiet Forest Path",
+    caption: "",
   },
   {
     src: "photos/photo3.png",
@@ -18,7 +18,7 @@ const photos = [
 
 export default function App() {
   return (
-    <div className="h-screen w-screen flex flex-col">
+    <div className="h-screen w-screen flex flex-col" style={{ backgroundColor: 'black' }}>
       <div className="flex-1 overflow-y-scroll snap-y snap-mandatory">
         {photos.map((photo, idx) => (
           <div
