@@ -71,7 +71,7 @@ export default function App() {
             isMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0 pointer-events-none'
           }`}
         >
-          <div className="flex items-center gap-2 p-2 bg-gray-900/90 rounded-lg shadow-lg">
+          <div className="flex items-center gap-2 p-2 bg-gray-900/90 rounded-lg shadow-lg" style={{ marginRight: '20px' }}>
             <FontAwesomeIcon icon={faPhone} style={{ color: 'white' }} className="text-green-400" />
             <a
               href="tel:+918240596697"
