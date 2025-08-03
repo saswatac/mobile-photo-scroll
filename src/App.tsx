@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationPin, faPhone, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
 const photos = [
