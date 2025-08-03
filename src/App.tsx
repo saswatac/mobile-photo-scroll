@@ -46,14 +46,14 @@ const photos = [
 ];
 
 export default function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
 
   return (
     <div className="h-screen w-screen flex flex-col relative" style={{ backgroundColor: 'black' }}>
       {/* Menu Toggle Button and Items Container */}
       <div className="top-4 left-0 w-full z-50 flex items-center px-4">
         {/* Menu Toggle Button */}
-        <button
+        {/* <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="bg-transparent hover:bg-white/10 p-3 transition-all duration-200 relative z-10 focus:outline-none"
           aria-label="Toggle menu"
@@ -63,7 +63,7 @@ export default function App() {
             className="text-white"
             style={{ color: 'white' }}
           />
-        </button>
+        </button> */}
 
         {/* Horizontal Menu Items */}
         <div
